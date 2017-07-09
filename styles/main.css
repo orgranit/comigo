@@ -1,5 +1,5 @@
 @media (max-width: 700px) {
-    nav {
+    #nav-bar {
         display: none;
     }
 }
@@ -23,6 +23,10 @@ body {
     font-weight: 300;
 }
 
+main{
+    padding-top: 66px;
+}
+
 a:active{
     color: #f14848;
     font-weight: bold;
@@ -34,21 +38,27 @@ a:active{
     padding: 0;
 }
 
-header {
-    height: 30px;
+.header {
+    height: 66px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    box-shadow: -2px 0px 20px 7px white;
+    z-index: 999;
 }
 
-nav{
-    position: fixed;
-    right: 1.5%;
-    top: 1%;
+nav {
+    right: 33px;
+    top: 11px;
+    position: absolute;
+    display: inline-block;
 }
 
 #comigo-main-logo {
     display: inline;
-    position: fixed;
-    left: 2%;
-    top: 1%;
+    left: 35px;
+    top: 20px;
+    position: absolute;
 }
 
 .center-block{
@@ -68,20 +78,34 @@ nav{
     color: white;
     display: inline-block;
     margin: 1em;
+    font-size: 1.2vw;
 }
 
 .nav-sub-ul{
     display: none;
     position: fixed;
+    top: 62px;
+    left:0px;
+    right: 0px;
+    padding: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 100;
+    text-transform: uppercase;
 }
 
 .nav-main-ul > li {
     display: inline-block;
+    font-size: 1.15vw;
+    margin-left: 1.5vw;
 }
 
 .nav-sub-ul > li {
     display: inline-block;
-    background: white;
+    background: #d9d9d9;
+    opacity: 0.97;
+    height: 10vw;
+    width: 33.3333333333%;
 }
 
 .nav-main-ul > li > a:hover,
@@ -90,7 +114,11 @@ nav{
     outline: 0;
 }
 
-.nav-sub-ul li a:hover,
+nav-sub-ul {
+    display: block;
+}
+
+.nav-sub-ul li:hover,
 .nav-sub-ul li a:focus {
     color: white;
     background: #f14848;
@@ -127,7 +155,7 @@ nav{
 
 #why-us h2{
     width: 60%;
-    font-size: 2.6rem;
+    font-size: 4.2vw;
     color: rgba(0, 0, 0, 0.7);
     margin: 0 auto;
 }
@@ -206,6 +234,7 @@ nav{
 .unique-exp p{
     color: gray;
     width: 50%;
+    font-size: 3vw;
 }
 
 #unique-exp-txt{
@@ -246,49 +275,95 @@ nav{
 #social-icons-learn-more a{
     background-color: #f14848;
 }
-#blog a{
-    color: white;
-    display: inline-block;
-    height: 100%;
-}
 
-#blog ul{
-    vertical-align: top;
-}
 
 .blog-item {
     display: inline-block;
     width: 16.6666666667%;
-    height: 31.111111124vw;
+    height: 36.1111111vw;
     vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    background: black;
 }
 
-#blog li:nth-of-type(1) {
-    background-color: #f14848;
+.blog-item .blog-img {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.blog-item p,
+.blog-item h3,
+.blog-item strong{
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.5vw
+}
+
+.blog-text div{
+    display: inline-block;
+    width: 100%;
+    height: 10vw;
+    background-color: rgba(220, 63, 63, 1);
+    text-align: center;
+}
+
+.blog-text strong {
+    display: inline-block;
+    margin-top: 5vw;
+}
+
+.blog-title{
+    position: absolute;
+    bottom: 1vw;
+    margin-left: 1vw;
+}
+
+.blog-title h3{
+    font-size: 5vw;
+}
+
+.blog-text {
+    position: absolute;
+    width: 100%;
+    bottom: -10vw;
+}
+
+.blog-item a:hover .blog-img {
+    opacity: 1;
+}
+
+.blog-item a:hover .blog-text{
+    bottom: 0;
+}
+
+.blog li:nth-of-type(1) {
+    background-color: rgba(220, 63, 63, 0.89);
     color: white;
  }
 
-.blog-item a {
-    background-position: center;
-}
-
-#blog li:nth-of-type(2) a{
+.blog li:nth-of-type(2) .blog-img{
     background-image: url("../assets/blog/ibc_post_EI-750x508.png");
 }
 
-#blog li:nth-of-type(3) a{
+.blog li:nth-of-type(3) .blog-img{
     background-image: url("../assets/blog/IMG_9294-750x563.jpeg");
 }
 
-#blog li:nth-of-type(4) a{
+.blog li:nth-of-type(4) .blog-img{
     background-image: url("../assets/blog/Image-Blog-Yoav_356121362-copy-750x563.jpg");
 }
 
-#blog li:nth-of-type(5) a{
+.blog li:nth-of-type(5) .blog-img{
     background-image: url("../assets/blog/post_tv_connect-750x508.jpeg");
 }
 
-#blog li:nth-of-type(6) a{
+.blog li:nth-of-type(6) .blog-img{
     background-image: url("../assets/blog/post_quality-750x508.jpeg");
 }
 
